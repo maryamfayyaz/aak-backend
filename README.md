@@ -9,7 +9,7 @@ docker-compose up
 
 # For Local
 ## Install Dependencies
-pip3 install -r requirements.txr
+pip3 install -r requirements.txt
 
 ## Migrate
 python3 manage.py migrate
