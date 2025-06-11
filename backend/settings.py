@@ -73,3 +73,5 @@ REST_FRAMEWORK = {
   ),
  'EXCEPTION_HANDLER': 'backend.utils.exceptions_handler.custom_exception_handler'
 }
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
