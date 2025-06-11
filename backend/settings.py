@@ -17,7 +17,8 @@ INSTALLED_APPS = [
   'django.contrib.messages',
   'django.contrib.staticfiles',
   'rest_framework',
-  'users'
+  'users',
+  'rest_framework_simplejwt.token_blacklist',
 ]
 
 TEMPLATES = [
@@ -67,5 +68,8 @@ ROOT_URLCONF = 'backend.urls'
 AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
+  'DEFAULT_AUTHENTICATION_CLASSES': (
+    'rest_framework_simplejwt.authentication.JWTAuthentication',
+  ),
  'EXCEPTION_HANDLER': 'backend.utils.exceptions_handler.custom_exception_handler'
 }
